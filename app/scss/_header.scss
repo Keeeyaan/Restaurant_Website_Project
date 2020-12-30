@@ -1,0 +1,57 @@
+.l-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: white;
+  .nav {
+    max-width: 1024px;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__menu {
+      @media screen and (max-width: 768px) {
+        position: fixed;
+        top: -50%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        transition: 0.46s;
+        background-color: white;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 1rem 1rem;
+        z-index: 100;
+      }
+    }
+    &__item {
+      margin-bottom: 1rem;
+    }
+    &__link, &__logo, &__toggle {
+      color: $text-color;
+      font-weight: 500;
+    }
+    &__link {
+      transition: 0.3s;
+      &:hover {
+        color: $first-color;
+      }
+    }
+    &__toggle {
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    .show-menu {
+      top: 6%;
+    }
+    .active-link {
+      color: $first-color;
+    }
+    .scroll-header {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
